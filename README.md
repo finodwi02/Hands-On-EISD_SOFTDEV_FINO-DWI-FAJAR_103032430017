@@ -25,8 +25,8 @@ Alasan teknis mengapa ini menjadi prioritas utama:
 2.  **Menjamin Kualitas Data (Data Integrity)**
     Validasi server memastikan tidak ada data sampah (seperti nama "." atau email "aaa") yang tersimpan. Bagi panitia, memiliki 25 data valid jauh lebih berharga daripada data penuh tapi palsu.
 
-3.  **Keamanan Sistem**
-    Validasi frontend mudah diakali (misalnya dengan mematikan JavaScript). Validasi server adalah benteng terakhir yang menjamin keamanan dan kebersihan data.
+3.  **Fondasi untuk Masalah Kuota**
+    masalah kuota menjadi tidak relevan jika 30 data yang masuk tersebut adalah data sampah ("aaa", "."). Dengan memastikan data yang masuk valid terlebih dahulu, kita bisa melakukan penyortiran berdasarkan timestamp (waktu masuk) untuk menentukan 25 peserta sah pertama.
 
 **Kesimpulan:**
-Mengamankan kualitas data masuk adalah prioritas mutlak dibanding perbaikan kosmetik, karena tanpa data yang valid, proses rekapitulasi tidak mungkin dilakukan.
+Masalah kuota yang berlebih (30 orang) masih bisa disortir manual berdasarkan waktu pendaftaran (timestamp) asalkan datanya valid. Namun, jika datanya rusak atau duplikat sejak awal, proses rekapitulasi menjadi mustahil dilakukan. Oleh karena itu, mengamankan kualitas data masuk adalah prioritas mutlak dibanding perbaikan kosmetik lainnya.
