@@ -1,11 +1,3 @@
-/**
- * Soal 6: Duplicate Detection
- * Tujuan: Mendeteksi email yang muncul lebih dari satu kali dalam array.
- * * Data Input:
- * Andi@gmail.com, Budi@gmail.com, Sari@gmail.com,
- * Andi@gmail.com, Rina@gmail.com, Budi@gmail.com
- */
-
 const dataEmail = [
   "Andi@gmail.com",
   "Budi@gmail.com",

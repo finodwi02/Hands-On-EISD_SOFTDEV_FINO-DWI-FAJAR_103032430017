@@ -1,14 +1,3 @@
-/**
- * Soal 2: Array Reading Dasar
- * Tujuan: Membaca data array dan menentukan kondisi (Tersedia vs Penuh).
- *
- * Data Study Group:
- * 1. Software Development: Kuota 20, Terdaftar 18
- * 2. UI/UX Design: Kuota 15, Terdaftar 15
- * 3. Technopreneur: Kuota 25, Terdaftar 10
- * 4. Intelligence System: Kuota 10, Terdaftar 10
- */
-
 // 1. Kita representasikan data tabel ke dalam bentuk Array of Objects
 const studyGroups = [
   { name: "Software Development", quota: 20, registered: 18 },
