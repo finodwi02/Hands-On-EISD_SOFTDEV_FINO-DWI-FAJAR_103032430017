@@ -13,8 +13,8 @@ function deteksiDuplikat(emails) {
     return console.log("Error: Data email kosong atau tidak valid.");
   }
 
-  // --- LOGIKA UTAMA: FREQUENCY MAP ---
-  // Kita gunakan object untuk mencatat berapa kali setiap email muncul.
+  // LOGIKA UTAMA: FREQUENCY MAP
+  //  gunakan object untuk mencatat berapa kali setiap email muncul.
   // Kunci (key) = email, Nilai (value) = jumlah kemunculan
   let frekuensiEmail = {};
 
@@ -31,7 +31,7 @@ function deteksiDuplikat(emails) {
     }
   }
 
-  // --- FILTERING: CARI YANG MUNCUL > 1 ---
+  // FILTERING: CARI YANG MUNCUL > 1 
   let emailDuplikat = [];
 
   // Loop melalui object frekuensi yang sudah kita buat tadi
@@ -41,7 +41,7 @@ function deteksiDuplikat(emails) {
     }
   }
 
-  // --- MENAMPILKAN HASIL ---
+  // MENAMPILKAN HASIL
   console.log("--- HASIL DETEKSI DUPLIKAT ---");
   if (emailDuplikat.length > 0) {
     console.log("Ditemukan email duplikat:");
@@ -57,6 +57,3 @@ function deteksiDuplikat(emails) {
 // Jalankan fungsi
 deteksiDuplikat(dataEmail);
 
-// --- TEST CASE TAMBAHAN ---
-// console.log("\n--- Test Tanpa Duplikat ---");
-// deteksiDuplikat(["a@mail.com", "b@mail.com", "c@mail.com"]);

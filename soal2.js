@@ -1,4 +1,4 @@
-// 1. Kita representasikan data tabel ke dalam bentuk Array of Objects
+// merepresentasikan data tabel ke dalam bentuk Array of Objects
 const studyGroups = [
   { name: "Software Development", quota: 20, registered: 18 },
   { name: "UI/UX Design", quota: 15, registered: 15 },
@@ -8,7 +8,7 @@ const studyGroups = [
 
 // Fungsi utama untuk memilah status kelas
 function checkClassAvailability(groups) {
-  // --- VALIDASI INPUT (Edge Case Handling) ---
+  // VALIDASI INPUT (Edge Case Handling)
   // Memastikan input adalah array dan tidak kosong
   if (!Array.isArray(groups) || groups.length === 0) {
     return "Error: Data tidak valid atau kosong.";
@@ -18,7 +18,7 @@ function checkClassAvailability(groups) {
   let availableGroups = []; // Untuk kelas yang masih tersedia
   let fullGroups = []; // Untuk kelas yang sudah penuh
 
-  // --- PROSES LOGIKA (Looping & Conditional) ---
+  // PROSES LOGIKA Looping & Conditional
   for (let i = 0; i < groups.length; i++) {
     const group = groups[i];
 
@@ -43,7 +43,7 @@ function checkClassAvailability(groups) {
     }
   }
 
-  // --- MENAMPILKAN HASIL ---
+  // MENAMPILKAN HASIL
   console.log("--- HASIL ANALISIS STUDY GROUP ---");
 
   console.log("Study Group yang Masih Tersedia:");
@@ -65,6 +65,3 @@ function checkClassAvailability(groups) {
 // Menjalankan fungsi dengan data yang sudah dibuat
 checkClassAvailability(studyGroups);
 
-// --- CONTOH TEST CASE TAMBAHAN (Untuk menguji ketahanan kode) ---
-// console.log("\n--- Test Case Data Kosong ---");
-// checkClassAvailability([]);

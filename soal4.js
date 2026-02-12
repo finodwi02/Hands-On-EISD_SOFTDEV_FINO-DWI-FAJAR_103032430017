@@ -1,11 +1,11 @@
 function validasiPendaftaran(nama, email, divisi, jumlahPeserta) {
-  // --- VALIDASI 1: NAMA ---
+  //  VALIDASI 1: NAMA 
   // Kita gunakan .trim() untuk memastikan user tidak hanya memasukkan spasi
   if (typeof nama !== "string" || nama.trim() === "") {
     return "Data tidak valid";
   }
 
-  // --- VALIDASI 2: EMAIL ---
+  // VALIDASI 2: EMAIL
   // Cek apakah string, tidak kosong, dan memiliki simbol '@'
   if (
     typeof email !== "string" ||
@@ -15,24 +15,24 @@ function validasiPendaftaran(nama, email, divisi, jumlahPeserta) {
     return "Data tidak valid";
   }
 
-  // --- VALIDASI 3: DIVISI ---
+  // VALIDASI 3: DIVISI
   // Sama seperti nama, tidak boleh kosong
   if (typeof divisi !== "string" || divisi.trim() === "") {
     return "Data tidak valid";
   }
 
-  // --- VALIDASI 4: JUMLAH PESERTA ---
+  // VALIDASI 4: JUMLAH PESERTA
   // Harus bertipe 'number' (angka) dan nilainya >= 1
   if (typeof jumlahPeserta !== "number" || jumlahPeserta < 1) {
     return "Data tidak valid";
   }
 
-  // --- KESIMPULAN ---
+  //  KESIMPULAN
   // Jika kode sampai di sini, berarti semua pengecekan di atas LOLOS (false semua)
   return "Data valid";
 }
 
-// --- TEST CASES (Pengujian) ---
+// TEST CASES (Pengujian)
 console.log("--- PENGUJIAN DATA ---");
 
 // 1. Data Benar Semua

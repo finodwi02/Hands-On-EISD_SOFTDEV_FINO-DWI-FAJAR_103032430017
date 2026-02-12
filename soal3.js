@@ -1,5 +1,5 @@
 function cekStatusPendaftaran(kuota, jumlahTerdaftar) {
-  // --- VALIDASI INPUT (Edge Case Handling) ---
+  // VALIDASI INPUT (Edge Case Handling)
   // 1. Pastikan input adalah angka
   if (typeof kuota !== "number" || typeof jumlahTerdaftar !== "number") {
     return "Error: Input harus berupa angka.";
@@ -10,7 +10,7 @@ function cekStatusPendaftaran(kuota, jumlahTerdaftar) {
     return "Error: Kuota atau jumlah terdaftar tidak boleh negatif.";
   }
 
-  // --- LOGIKA UTAMA ---
+  // LOGIKA UTAMA
   // Menggunakan if-else if untuk mengecek kondisi secara berurutan
 
   // Kondisi 4: Jika melebihi kuota
@@ -35,7 +35,7 @@ function cekStatusPendaftaran(kuota, jumlahTerdaftar) {
   }
 }
 
-// --- PENGUJIAN KODE (Test Cases) ---
+// PENGUJIAN KODE Test Cases
 const kuotaMaksimal = 20;
 
 console.log("--- TEST CASE: Kuota 20 ---");

@@ -6,17 +6,17 @@ const dataPendaftaran = [
 ];
 
 function hitungStatistikPeserta(data) {
-  // --- VALIDASI INPUT (Edge Case) ---
+  // VALIDASI INPUT (Edge Case)
   // Mencegah error "Division by Zero" (pembagian dengan nol) jika array kosong
   if (!Array.isArray(data) || data.length === 0) {
     return "Data kosong, tidak bisa menghitung statistik.";
   }
 
-  // --- INISIALISASI ACCUMULATOR ---
+  // INISIALISASI ACCUMULATOR
   // Variabel penampung untuk menjumlahkan total
   let totalPeserta = 0;
 
-  // --- PROSES LOOPING (Aggregation) ---
+  // PROSES LOOPING (Aggregation)
   for (let i = 0; i < data.length; i++) {
     // Validasi data per item: Pastikan jumlahnya angka valid
     if (typeof data[i].jumlah === "number") {
@@ -25,11 +25,11 @@ function hitungStatistikPeserta(data) {
     }
   }
 
-  // --- MENGHITUNG RATA-RATA ---
+  // MENGHITUNG RATA-RATA
   // Rumus: Total / Jumlah Data
   let rataRata = totalPeserta / data.length;
 
-  // --- MENAMPILKAN HASIL ---
+  // MENAMPILKAN HASIL
   console.log("--- STATISTIK PESERTA ---");
   console.log("Total Peserta Terdaftar : " + totalPeserta);
   console.log("Rata-rata per Kelas     : " + rataRata);
@@ -40,7 +40,3 @@ function hitungStatistikPeserta(data) {
 
 // Menjalankan fungsi
 hitungStatistikPeserta(dataPendaftaran);
-
-// --- TEST CASE TAMBAHAN ---
-// console.log("\n--- Test Case Array Kosong ---");
-// hitungStatistikPeserta([]);
